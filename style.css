@@ -1,0 +1,31 @@
+body{
+    background: url("img/background.jpg");
+    font-family: "Mulish";
+}
+
+.container{
+    background-color: rgb(255, 244, 230);
+}
+
+@font-face {
+    font-family: 'Japanese';
+    src: url('fonts/JAPAB___.TTF');
+}
+
+h1{
+    color: rgb(167, 17, 17);
+    font-family: Japanese;
+}
+
+#pprincipal, #jiroono{
+    text-align: justify;
+}
+
+#psecond{
+    text-align: justify;
+    display: none;
+}
+
+#imgfinal{
+    width: 100%;
+}

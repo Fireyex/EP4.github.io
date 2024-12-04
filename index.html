@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container border p-0">
+
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="5000">
+                    <img src="img/sushi.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                    <img src="img/ramen.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                    <img src="img/yakitori.png" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Principal</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="#descripcion">Descripción</a>
+                        <a class="nav-link" href="#comidas">Comidas</a>
+                    </div>
+                </div>
+            </div>
+</nav>
+
+        <div id="descripcion" class="pt-2 px-3 px-md-5">
+            <h1 class="text-center fs-1 my-3">Comida Japonesa</h1>
+            <p id="pprincipal" class="fs-5">Bienvenidos a nuestra página dedicada a la comida japonesa, donde exploramos una de las gastronomías más fascinantes y diversas del mundo. La cocina japonesa se caracteriza por su enfoque en la frescura de los ingredientes, el equilibrio de sabores y la presentación artística de cada plato.</p>
+            <p id="psecond" class="fs-5">Desde el sushi y sashimi, hasta platos más tradicionales como el ramen, tempura y yakitori. Cada comida refleja una rica herencia cultural y un profundo respeto por los alimentos. ¡Descubre los secretos detrás de estas delicias y déjate llevar por un viaje culinario lleno de tradición y sabor!</p>
+            <button id="botonmain" onclick="botonmas()" type="button" class="btn btn-outline-primary mb-4">Seguir leyendo...</button>
+        </div>
+
+        <script> //Script del botón Más
+            function botonmas() {
+                var botonmain = document.getElementById("botonmain");
+                botonmas1 = document.getElementById(botonmas);
+                if (psecond.style.display === "block") {
+                    psecond.style.display = "none";
+                    botonmain.textContent = "Seguir leyendo...";
+                } else {
+                    psecond.style.display = "block";
+                    botonmain.textContent = "Ocultar";
+                }
+            }
+        </script>
+
+        <div id="comidas" class="row g-0 px-4">
+            <div class="card col-md m-2">
+                <img src="img/sushicard.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Sushi</h5>
+                    <p class="card-text">Arroz sazonado con vinagre acompañado de pescado crudo, mariscos o verduras. Existen diferentes variedades como el nigiri, maki y sashimi (este último es solo pescado crudo sin arroz).</p>
+                    <a href="#" class="btn btn-primary" onclick="proximamente()">Leer receta completa</a>
+                </div>
+            </div>
+            <div class="card col-md m-2">
+                <img src="img/ramencard.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Ramen</h5>
+                    <p class="card-text">Sopa de fideos de trigo servida en un caldo con diversos ingredientes como carne de cerdo, huevo, algas y cebollas. Hay varias versiones, siendo las más populares el shoyu ramen (caldo de salsa de soja), miso ramen y tonkotsu ramen (caldo de cerdo).</p>
+                    <a href="#" class="btn btn-primary" onclick="proximamente()">Leer receta completa</a>
+                </div>
+            </div>
+            <div class="card col-md m-2">
+                <img src="img/takoyakicard.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Takoyaki</h5>
+                    <p class="card-text">Bolitas de masa rellenas de pulpo y cubiertas con salsa especial, mayonesa, y hojuelas de bonito seco.</p>
+                    <a href="#" class="btn btn-primary" onclick="proximamente()">Leer receta completa</a>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function proximamente(){
+                alert("Este sitio web todavía está en desarrollo, vuelva más tarde :D");
+            }
+        </script>
+
+        <div class="row d-flex text-center g-0 p-3">
+            <div class="border col-md">
+                <img class="img-fluid rounded" src="img/jiroono.jpg" alt="">
+            </div>
+            <div class="border col-md p-4">
+                <figure>
+                    <blockquote class="blockquote mt-2">
+                        <p>"El sushi perfecto no se puede apresurar. El verdadero arte requiere paciencia."</p>
+                    </blockquote>
+                    <figcaption class="blockquote-footer">
+                        <cite title="Source Title">Jiro Ono</cite>
+                    </figcaption>
+                </figure>
+                <p id="jiroono" class="fs-4">Jiro Ono es un referente mundial en la cocina japonesa, especialmente en el arte de preparar sushi. Dueño de Sukiyabashi Jiro, un restaurante con tres estrellas Michelin en Tokio, su enfoque hacia la perfección culinaria ha sido aclamado por su dedicación y disciplina. Jiro comenzó a trabajar en el sushi desde joven, y con el paso de los años perfeccionó cada técnica, buscando siempre mejorar y superar los estándares del sushi tradicional.</p>
+            </div>
+        </div>
+        <img id="imgfinal" class="img-fluid" src="img/itadakimasu.png" alt="">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
